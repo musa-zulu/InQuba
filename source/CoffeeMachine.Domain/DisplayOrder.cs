@@ -12,15 +12,17 @@
         public override string ToString()
         {
             var ingredients = "";
-
-            foreach (var ingredient in Drink.Ingredients.Ingredients)
+            if (Drink?.Ingredients?.Ingredients != null)
             {
-                if (ingredient.IngredientName == "Coffee" ||
-                    ingredient.IngredientName == "Cappuccino" ||
-                    ingredient.IngredientName == "Latte")
-                    ingredients += ingredient.IngredientName + " With ("+ ingredient.IngredientUnit +") Beans,";
-                else 
-                    ingredients += " And ("+ingredient.IngredientUnit +") Units of "+ ingredient.IngredientName + ",";
+                foreach (var ingredient in Drink.Ingredients.Ingredients)
+                {
+                    if (ingredient.IngredientName == "Coffee" ||
+                        ingredient.IngredientName == "Cappuccino" ||
+                        ingredient.IngredientName == "Latte")
+                        ingredients += ingredient.IngredientName + " With (" + ingredient.IngredientUnit + ") Beans,";
+                    else
+                        ingredients += " And (" + ingredient.IngredientUnit + ") Units of " + ingredient.IngredientName + ",";
+                }
             }
 
             ingredients = ingredients.TrimEnd(',');
