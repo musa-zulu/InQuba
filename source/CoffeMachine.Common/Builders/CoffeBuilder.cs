@@ -9,5 +9,9 @@ namespace CoffeMachine.Common.Builders
         {
             return WithProp(x => x.IngredientName = ingredientName);
         }
+        public CoffeBuilder WithIngredientUnit(int ingredientUnit)
+        {
+            return WithProp(x => x.IngredientUnit = ingredientUnit);
+        }
     }
 }

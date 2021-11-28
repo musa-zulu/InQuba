@@ -1,11 +1,10 @@
 ﻿using CoffeeMachine.Domain;
-using CoffeMachine.Common.Builders;
 using NUnit.Framework;
 
 namespace CoffeeMachine.Tests.Logic
 {
     [TestFixture]
-    public class CoffeeTests
+    public class LatteTests
     {
         [Test]
         public void Construct()
@@ -13,33 +12,29 @@ namespace CoffeeMachine.Tests.Logic
             //---------------Set up test pack-------------------
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
-            Assert.DoesNotThrow(() => new Coffee(1));
+            Assert.DoesNotThrow(() => new Latte(1));
             //---------------Test Result -----------------------
         }
 
         [Test]
-        public void Construct_ShouldSetIngredientNameToCoffee()
+        public void Construct_ShouldSetIngredientNameToLatte()
         {
             //---------------Set up test pack-------------------
-            var ingredientName = "Coffee";
-            var sut = new CoffeBuilder()
-                .WithIngredientName(ingredientName)
-                .Build();
+            var sut = new Latte(1);
+            var expected = "Latte";
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             var results = sut.IngredientName;
             //---------------Test Result -----------------------
-            Assert.AreEqual(ingredientName, results);
+            Assert.AreEqual(expected, results);
         }
 
         [Test]
         public void Construct_ShouldSetIngredientUnitToOne()
         {
             //---------------Set up test pack-------------------
-            var ingredientsUnit = 2;
-            var sut = new CoffeBuilder()
-                        .WithIngredientUnit(ingredientsUnit)
-                        .Build();
+            var ingredientsUnit = 1;
+            var sut = new Latte(ingredientsUnit);
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             var results = sut.IngredientUnit;
