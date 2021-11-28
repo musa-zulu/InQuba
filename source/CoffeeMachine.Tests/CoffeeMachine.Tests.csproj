@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+	  <PackageReference Include="NSubstitute" Version="4.2.2" />
+	  <PackageReference Include="NUnit" Version="3.13.2" />
+	  <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+	  <PackageReference Include="PeanutButter.RandomGenerators" Version="2.0.29" />
+	  <PackageReference Include="PeanutButter.TestUtils.Generic" Version="2.0.29" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\CoffeeMachine.Domain\CoffeeMachine.Domain.csproj" />
+	  <ProjectReference Include="..\CoffeeMachine.Logic\CoffeeMachine.Domain.csproj" />
+	  <ProjectReference Include="..\CoffeMachine.Common\CoffeMachine.Common.csproj" />
+	</ItemGroup>
+
+</Project>

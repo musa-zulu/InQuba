@@ -1,0 +1,37 @@
+source/*/obj/
+source/*/bin/
+source/packages/
+*.suo
+source/buildreports/
+source/node_modules/
+source/test-results.xml
+*.user
+source/bin/
+nunit-result.xml
+*.swp
+source/coverage
+buildreports
+source/.vs/config/applicationhost.config
+source/OpenCover/
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+
+
+*.testlog
+
+source/ProductInventory.Tests/obj/Debug/net5.0/
+
+*.props
+
+*.targets
+
+*.cache
+
+*.v2
+source/.vs/CoffeeMachine/v16/TestStore/0/testlog.manifest
