@@ -4,7 +4,6 @@ using CoffeeMachine.Domain;
 using PeanutButter.TestUtils.Generic;
 using CoffeeMachine.Tests.Builders;
 using CoffeMachine.Common.Builders;
-using System.Collections.Generic;
 
 namespace CoffeeMachine.Tests.Domain
 {
@@ -77,7 +76,7 @@ namespace CoffeeMachine.Tests.Domain
             sut.ShouldHaveProperty(propertyName, propertyType);
             //---------------Test Result -----------------------
         }
-        private string SetUpMessage(DrinkIngredients ingredients)
+        private static string SetUpMessage(DrinkIngredients ingredients)
         {
             var message = "";
             foreach (var ingredient in ingredients.Ingredients)
