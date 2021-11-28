@@ -19,7 +19,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\CoffeeMachine.Domain\CoffeeMachine.Domain.csproj" />
-	  <ProjectReference Include="..\CoffeeMachine.Logic\CoffeeMachine.Domain.csproj" />
 	  <ProjectReference Include="..\CoffeMachine.Common\CoffeMachine.Common.csproj" />
 	</ItemGroup>
 

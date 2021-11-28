@@ -8,18 +8,21 @@
     /// 
     /// Also Single Responsibility Principle is applied since each module is only responsible for one thing only.
     /// </summary>
-    public class Cappuccino : Coffee
+    public class Cappuccino : Ingredient
     {
-        public Cappuccino(int amountOfBeans) : base("Cappuccino", amountOfBeans) { }
+        private const string _coffeName = "Cappuccino";
+        public Cappuccino(int amountOfBeans) : base(_coffeName, amountOfBeans) { }
     }
 
-    public class PlainCoffee : Coffee
+    public class Coffee : Ingredient
     {
-        public PlainCoffee(int amountOfBeans) : base("Coffee", amountOfBeans) { }
+        private const string _coffeName = "Coffee";
+        public Coffee(int amountOfBeans) : base(_coffeName, amountOfBeans) { }
     }
 
-    public class Latte : Coffee
+    public class Latte : Ingredient
     {
-        public Latte(int amountOfBeans) : base("Latte", amountOfBeans) { }
+        private const string _coffeName = "Latte";
+        public Latte(int amountOfBeans) : base(_coffeName, amountOfBeans) { }
     }
 }

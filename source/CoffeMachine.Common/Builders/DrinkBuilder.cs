@@ -24,7 +24,7 @@ namespace CoffeeMachine.Tests.Builders
             return this;
         }
 
-        public Drink Build()
+        public new Drink Build()
         {
             return new Drink(DrinkName, Ingredients);
         }
