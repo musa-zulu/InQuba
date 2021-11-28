@@ -62,7 +62,6 @@ namespace CoffeeMachine.Service
                 sugarOption = GetSugarOption();
             }
         }
-
         private void MakeCoffee()
         {
             if (CoffeeOption > 0 && CoffeeOption <= 3)
@@ -161,8 +160,7 @@ namespace CoffeeMachine.Service
                 MakeAnotherCoffeOrExit();
             }
             else
-            {
-                //print type off to shut down the machine 
+            {                
                 ShudownProgram();
             }
         }
@@ -265,7 +263,7 @@ namespace CoffeeMachine.Service
 
             if (terminateOption.ToLowerInvariant() == "off")
             {
-                //kill the program.
+                Environment.Exit(0);
             }
         }
     }
