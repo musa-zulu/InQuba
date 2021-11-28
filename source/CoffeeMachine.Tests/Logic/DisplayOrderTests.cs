@@ -67,7 +67,7 @@ namespace CoffeeMachine.Tests.Domain
         }
 
         [TestCase("Drink", typeof(Drink))]
-        public void Customer_ShouldHaveProperty(string propertyName, Type propertyType)
+        public void DisplayOrder_ShouldHaveProperty(string propertyName, Type propertyType)
         {
             //---------------Set up test pack-------------------
             var sut = typeof(DisplayOrder);

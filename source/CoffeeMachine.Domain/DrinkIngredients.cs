@@ -9,6 +9,6 @@ namespace CoffeeMachine.Domain
             Ingredients = ingredients;
         }
 
-        public IEnumerable<Ingredient> Ingredients;
+        public IEnumerable<Ingredient> Ingredients { get; set; }
     }
 }
