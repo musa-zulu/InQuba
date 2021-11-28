@@ -1,15 +1,10 @@
 ﻿using CoffeeMachine.Domain;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoffeeMachine.Tests.Logic
 {
     [TestFixture]
-    public class CappuccinoTests
+    public class CoffeeTests
     {
         [Test]
         public void Construct()
@@ -17,16 +12,16 @@ namespace CoffeeMachine.Tests.Logic
             //---------------Set up test pack-------------------
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
-            Assert.DoesNotThrow(() => new Cappuccino(1));
+            Assert.DoesNotThrow(() => new Coffee(1));
             //---------------Test Result -----------------------
         }
 
         [Test]
-        public void Construct_ShouldSetIngredientNameToCappuccino()
+        public void Construct_ShouldSetIngredientNameToCoffee()
         {
             //---------------Set up test pack-------------------
-            var sut = new Cappuccino(1);
-            var expected = "Cappuccino";
+            var sut = new Coffee(1);
+            var expected = "Coffee";
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             var results = sut.IngredientName;
@@ -39,7 +34,7 @@ namespace CoffeeMachine.Tests.Logic
         {
             //---------------Set up test pack-------------------
             var ingredientsUnit = 1;
-            var sut = new Cappuccino(ingredientsUnit);
+            var sut = new Coffee(ingredientsUnit);
             //---------------Assert Precondition----------------
             //---------------Execute Test ----------------------
             var results = sut.IngredientUnit;
